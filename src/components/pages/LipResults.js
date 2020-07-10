@@ -4,7 +4,7 @@ import Navigation from "../ui/Navigation";
 import AppTemplate from "../ui/AppTemplate";
 import { Link } from "react-router-dom";
 import LipResult from "../ui/LipResult";
-import lipsticks from "../../mock-data/lipsticks";
+//import lipsticks from "../../mock-data/lipsticks";
 import axios from "axios";
 import { connect } from "react-redux";
 import actions from "../../store/actions";
@@ -36,8 +36,11 @@ class LipResults extends React.Component {
       // };
    }
    render() {
-      const test2 = this.props.lipstick;
-      console.log("TESY", test2);
+      const lipsticks = this.props.lipstick;
+      console.log(lipsticks);
+
+      //const test2 = this.props.lipstick;
+      //console.log("TESY", test2);
       const userAnswers = {};
       const user = this.props.location.results;
       let recomendations = [];
@@ -52,8 +55,8 @@ class LipResults extends React.Component {
          });
       }
 
-      console.log(recomendations);
-      const lipstickRecommendations = this.props.lipstick;
+      console.log("recomendations", recomendations);
+      // const lipsticks = this.props.lipstick;
 
       // const lipstickRecommendations = lipsticks
       //    .map((lipstick) => {

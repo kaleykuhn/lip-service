@@ -4,7 +4,7 @@ import combineReducers from "./combineReducers";
 
 const initialState = {
    currentUser: {},
-   lipsticks: [],
+   lipstick: [],
 };
 
 const store = createStore(combineReducers, initialState, composeWithDevTools());
