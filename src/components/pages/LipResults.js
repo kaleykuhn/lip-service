@@ -15,7 +15,7 @@ class LipResults extends React.Component {
 
       axios
          .get(
-            "https://raw.githubusercontent.com/kaleykuhn/lip-service-mpa/master/src/mock-data/lipsticks.json"
+            "https://raw.githubusercontent.com/kaleykuhn/lip-service/master/src/mock-data/lipsticks.json"
          )
          .then(function (res) {
             // handle success

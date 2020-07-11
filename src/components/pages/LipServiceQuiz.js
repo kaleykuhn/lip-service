@@ -13,7 +13,7 @@ export default class LipServiceQuiz extends React.Component {
       super();
       axios
          .get(
-            "https://raw.githubusercontent.com/kaleykuhn/lip-service-mpa/master/src/mock-data/user.json"
+            "https://raw.githubusercontent.com/kaleykuhn/lip-service/master/src/mock-data/user.json"
          )
          .then(function (response) {
             // handle success
