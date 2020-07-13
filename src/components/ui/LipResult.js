@@ -12,7 +12,7 @@ class LipResult extends React.Component {
       return (
          <div className="col-12 col-xl-10 offset-xl-1 col-lg-12 offset-lg-0 col-md-12 offset-md-0 card mb-2 px-2">
             <div className="card-header">Match</div>
-            <div className="card-body blubbers">
+            <div className="card-body ">
                <img
                   src={appLogo}
                   width="46px;"
