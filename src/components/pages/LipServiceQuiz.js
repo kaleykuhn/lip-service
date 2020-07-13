@@ -103,7 +103,9 @@ export default class LipServiceQuiz extends React.Component {
                   className="mb-1 ml-2"
                />
                <div className="card-body bg-dark">
-                  Which of the following most describes yourself ?
+                  <p className="playful">
+                     Which of the following most describes yourself ?
+                  </p>
                   <div className="mb-3"></div>
                   <div className="custom-control custom-radio">
                      <input
@@ -117,7 +119,7 @@ export default class LipServiceQuiz extends React.Component {
                         value="Daring"
                      />
                      <label
-                        className="custom-control-label"
+                        className="custom-control-label d-inline"
                         htmlFor="942d4afe-5370-400d-b71f-d9f61c644f3e"
                      >
                         Daring
@@ -128,14 +130,14 @@ export default class LipServiceQuiz extends React.Component {
                         onChange={(e) => {
                            this.setDescribeYourselfAnswer(e);
                         }}
-                        className="custom-control-input "
+                        className="custom-control-input"
                         type="radio"
                         name="describe"
                         id="d996f5fe-342a-42ba-bee8-329e78b13307"
                         value="Reserved"
                      />
                      <label
-                        className="custom-control-label"
+                        className="custom-control-label d-inline"
                         htmlFor="d996f5fe-342a-42ba-bee8-329e78b13307"
                      >
                         Reserved
@@ -154,7 +156,7 @@ export default class LipServiceQuiz extends React.Component {
                      />
 
                      <label
-                        className="custom-control-label"
+                        className="custom-control-label d-inline"
                         htmlFor="bc137dc8-74e1-402c-b2e3-f83a5aa75c32"
                      >
                         Compassionate
@@ -172,7 +174,9 @@ export default class LipServiceQuiz extends React.Component {
                   className="mb-1 ml-2"
                />
                <div className="card-body bg-dark">
-                  Which of these would your best friend describe you as?
+                  <p className="">
+                     Which of these would your best friend describe you as?
+                  </p>
                   <div className="mb-3"></div>
                   <div className="custom-control custom-radio">
                      <input
@@ -186,7 +190,7 @@ export default class LipServiceQuiz extends React.Component {
                         value="Communicative"
                      />
                      <label
-                        className="custom-control-label"
+                        className="custom-control-label d-inline"
                         htmlFor="89887a54-ce4c-40b3-968a-4a0e10c4f4ab"
                      >
                         Communicative
@@ -197,14 +201,14 @@ export default class LipServiceQuiz extends React.Component {
                         onChange={(e) => {
                            this.setFriendAnswer(e);
                         }}
-                        className="custom-control-input  "
+                        className="custom-control-input"
                         type="radio"
                         name="friend"
                         id="194b8bb1-c609-4686-8772-8d84a850dc57"
                         value="Discreet"
                      />
                      <label
-                        className="custom-control-label"
+                        className="custom-control-label d-inline"
                         htmlFor="194b8bb1-c609-4686-8772-8d84a850dc57"
                      >
                         Discreet
@@ -222,7 +226,7 @@ export default class LipServiceQuiz extends React.Component {
                         value="Candid"
                      />
                      <label
-                        className="custom-control-label"
+                        className="custom-control-label d-inline"
                         htmlFor="9a7444b0-8b2f-40c6-91fd-0b57107f1d97"
                      >
                         Candid
@@ -366,7 +370,7 @@ export default class LipServiceQuiz extends React.Component {
                         className="custom-control-label"
                         htmlFor="08cc0730-3cd1-490c-a7f3-d3f44e14dede"
                      >
-                        Open Mindedness
+                        Open-Mindedness
                      </label>
                   </div>
                   <div className="mb-4"></div>
