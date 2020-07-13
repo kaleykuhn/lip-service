@@ -17,23 +17,20 @@ class LipResults extends React.Component {
          .get(
             "https://raw.githubusercontent.com/kaleykuhn/lip-service/master/src/mock-data/lipsticks.json"
          )
-         .then(function (res) {
+         .then((res) => {
             // handle success
             console.log(res);
+            console.log(res.data);
             props.dispatch({
                type: actions.STORE_LIPSTICK,
                payload: res.data,
             });
          })
-         .catch(function (error) {
+
+         .catch((error) => {
             // handle error
             console.log(error);
          });
-
-      // this.state = {
-      //    user: users,
-      //
-      // };
    }
    render() {
       const lipsticks = this.props.lipstick;
