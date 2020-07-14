@@ -2,10 +2,7 @@ import React from "react";
 import Header from "../ui/Header";
 import Navigation from "../ui/Navigation";
 import AppTemplate from "../ui/AppTemplate";
-import users from "../../mock-data/users";
-import { Link } from "react-router-dom";
 import appLogo from "../../icons/rote-lippen.png";
-import axios from "axios";
 import { connect } from "react-redux";
 import { withRouter } from "react-router-dom";
 
@@ -71,6 +68,23 @@ class LipServiceQuiz extends React.Component {
       newUser.tags = tags;
       console.log(newUser);
       this.setState({ user: newUser });
+
+      // axios
+      //    .get("https://run.mocky.io/v3/d35a8f5c-4f55-4d37-b22a-11a74898a230")
+      //    .then((res) => {
+      //       // handle success
+      //       console.log(res);
+      //       console.log(res.data);
+      //       props.dispatch({
+      //          type: actions.UPDATE_CURRENT_USER,
+      //          payload: res.data,
+      //       });
+      //    })
+
+      //    .catch((error) => {
+      //       // handle error
+      //       console.log(error);
+      //    });
       //console.log(this.state.user);
       this.props.history.push({
          pathname: "/lip-results",
@@ -390,9 +404,9 @@ class LipServiceQuiz extends React.Component {
       );
    }
 }
-function mapStateToProps(currentUser) {
+function mapStateToProps(state) {
    return {
-      currentUser: currentUser.currentUser[0],
+      currentUser: state.currentUser,
    };
 }
 export default withRouter(connect(mapStateToProps)(LipServiceQuiz));

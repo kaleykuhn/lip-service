@@ -88,12 +88,12 @@ class Login extends React.Component {
             .get("https://run.mocky.io/v3/d35a8f5c-4f55-4d37-b22a-11a74898a230")
             .then((res) => {
                // handle success
-               const currentUser = res.data;
+               const currentUser = res.data[0];
                console.log("CURRENT", currentUser);
 
                this.props.dispatch({
                   type: actions.UPDATE_CURRENT_USER,
-                  payload: res.data,
+                  payload: currentUser,
                });
             })
 
@@ -133,9 +133,9 @@ class Login extends React.Component {
                      placeholder=""
                   />
                   {this.state.hasEmailError && (
-                     <small className="text-danger loginerror">
+                     <p className="text-danger loginerror">
                         {this.state.emailError}
-                     </small>
+                     </p>
                   )}
 
                   <label htmlFor="login-password-input" className="text-muted">
@@ -151,9 +151,9 @@ class Login extends React.Component {
                      placeholder=""
                   />
                   {this.state.hasPasswordError && (
-                     <small className="text-danger loginerror">
+                     <p className="text-danger loginerror">
                         {this.state.passwordError}
-                     </small>
+                     </p>
                   )}
 
                   <button

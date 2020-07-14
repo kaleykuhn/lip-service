@@ -184,16 +184,16 @@ const lipsticks = [
    },
    {
       id: "00de5359-fa23-4e5d-9223-31221cdfd439",
-      name: "Heroine",
+      name: "Tryst",
       brand: "Urban Decay",
-      color: "Navy Blue",
-      finish: "Comfort Matte",
+      color: "Red Fuschia",
+      finish: "Cream",
       desc:
-         "Urban Decay Heroine is a very cool-toned, dark blue with a satin finish",
+         "Urban Decay Tryst is described as a red-fuchsia with a Cream finish. It's a bold, bright, medium-dark pink-coral with warm undertones and a satiny sheen. It was intensely pigmented and yielded even, opaque color coverage",
       modelImageUrl:
-         "https://www.urbandecay.com/dw/image/v2/AANG_PRD/on/demandware.static/-/Sites-urbandecay-master-catalog/default/dw123d506d/ViceLipstickLPImages/ModelImages/3605971156991_vicelipstick_comfortmatte_heroine_alt7.jpg?sw=465&sfrm=jpg&q=70",
+         "https://www.urbandecay.com/dw/image/v2/AANG_PRD/on/demandware.static/-/Sites-urbandecay-master-catalog/default/dwb9364b50/ViceLipstickLPImages/ModelImages/3605971159435_vicelipstick_cream_tryst_alt7.jpg?sw=465&sfrm=jpg&q=70",
       buyNowUrl:
-         "https://www.urbandecay.com/vice-lipstick-by-urban-decay/ud771.html?dwvar_ud771_color=HEROINE%20%28COMFORT%20MATTE%29",
+         "https://www.urbandecay.com/vice-lipstick-by-urban-decay/ud771.html?dwvar_ud771_color=TRYST%20%28CREAM%29",
 
       tag: {
          id: "5ae236f3-c9e4-4fc3-9f55-5322896c6c60",

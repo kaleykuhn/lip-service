@@ -15,9 +15,7 @@ class LipResults extends React.Component {
       super(props);
 
       axios
-         .get(
-            "https://raw.githubusercontent.com/kaleykuhn/lip-service/master/src/mock-data/lipsticks.json"
-         )
+         .get("https://run.mocky.io/v3/8737dfe5-5cdd-4b97-b4e6-a64a283f7dfc")
          .then((res) => {
             // handle success
             console.log(res);
