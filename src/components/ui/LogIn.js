@@ -101,7 +101,7 @@ class Login extends React.Component {
                // handle error
                console.log(error);
             });
-         this.props.history.push("/lip-service-quiz");
+         //this.props.history.push("/lip-service-quiz");
 
          //redirect the user
          this.props.history.push("lip-service-quiz");
