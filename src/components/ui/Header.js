@@ -28,14 +28,21 @@ class Header extends React.Component {
                Lip Service
             </h3>
 
-            <Link to="/" type="button" className="btn btn-link float-right">
+            <Link
+               to="/"
+               type="button"
+               className="btn btn-link float-right"
+               onClick={() => {
+                  this.logoutCurrentUser();
+               }}
+            >
                Log out
             </Link>
          </div>
       );
    }
 }
-function mapStateToProps(state) {
+function mapStateToProps(currentUser) {
    // redux store is state global
    return {};
 }
