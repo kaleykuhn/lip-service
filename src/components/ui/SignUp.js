@@ -34,7 +34,7 @@ class SignUp extends React.Component {
             emailError: "Please enter your email. ",
             hasEmailError: true,
          });
-      else if (!EMAIL_REGEX.test(lowerCasedEmailInput)) {
+      else if (EMAIL_REGEX.test(lowerCasedEmailInput) === false) {
          console.log("NOT a VALID EMAIL");
          this.setState({
             emailError: "Please enter a valid email address.",
@@ -105,8 +105,8 @@ class SignUp extends React.Component {
       console.log(emailInput);
       const passwordInput = document.getElementById("signup-password-input")
          .value;
-      this.setEmailState(emailInput);
-      this.setPasswordState(passwordInput, emailInput);
+      await this.setEmailState(emailInput);
+      await this.setPasswordState(passwordInput, emailInput);
       if (
          this.state.hasEmailError === false &&
          this.state.hasPasswordError === false
