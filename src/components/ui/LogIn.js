@@ -4,6 +4,9 @@ import { v4 as getUUid } from "uuid";
 import hash from "object-hash";
 import { withRouter } from "react-router-dom";
 import { EMAIL_REGEX } from "../../utils/helpers";
+import axios from "axios";
+import actions from "../../store/actions";
+import { connect } from "react-redux";
 
 class Login extends React.Component {
    constructor(props) {
@@ -81,6 +84,25 @@ class Login extends React.Component {
             createdAt: Date.now(),
          };
          console.log("Valid!!!!", user);
+         axios
+            .get("https://run.mocky.io/v3/d35a8f5c-4f55-4d37-b22a-11a74898a230")
+            .then((res) => {
+               // handle success
+               const currentUser = res.data;
+               console.log("CURRENT", currentUser);
+
+               this.props.dispatch({
+                  type: actions.UPDATE_CURRENT_USER,
+                  payload: res.data,
+               });
+            })
+
+            .catch((error) => {
+               // handle error
+               console.log(error);
+            });
+         this.props.history.push("/lip-service-quiz");
+
          //redirect the user
          this.props.history.push("lip-service-quiz");
       }
@@ -149,4 +171,7 @@ class Login extends React.Component {
       );
    }
 }
-export default withRouter(Login);
+function mapStateToProps(currentUser) {
+   return {};
+}
+export default withRouter(connect(mapStateToProps)(Login));

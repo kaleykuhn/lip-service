@@ -4,6 +4,9 @@ import hash from "object-hash";
 import { v4 as getUUid } from "uuid";
 import { withRouter } from "react-router-dom";
 import { EMAIL_REGEX } from "../../utils/helpers";
+import axios from "axios";
+import actions from "../../store/actions";
+import { connect } from "react-redux";
 
 class SignUp extends React.Component {
    constructor(props) {
@@ -113,9 +116,27 @@ class SignUp extends React.Component {
             email: emailInput,
             password: hash(passwordInput),
             createdAt: Date.now(),
+            tags: "",
          };
          console.log("Valid!!!!", user);
-         this.props.history.push("lip-service-quiz");
+         axios
+            .get("https://run.mocky.io/v3/d35a8f5c-4f55-4d37-b22a-11a74898a230")
+            .then((res) => {
+               // handle success
+               const currentUser = res.data;
+               console.log("CURRENT", currentUser);
+
+               this.props.dispatch({
+                  type: actions.UPDATE_CURRENT_USER,
+                  payload: res.data,
+               });
+            })
+
+            .catch((error) => {
+               // handle error
+               console.log(error);
+            });
+         this.props.history.push("/lip-service-quiz");
       }
    }
 
@@ -126,7 +147,7 @@ class SignUp extends React.Component {
                <div className="card-body text-dark bg-white rounded">
                   <h2 className="card-title">Nice to Meet You</h2>
                   <p className="card-title">Sign up. Let your Lips Shine</p>
-                  {/* whenClicked is a property not an event, per se. */}
+
                   <div className="" id="form1">
                      {this.state.isDisplayingInputs && (
                         <>
@@ -207,4 +228,7 @@ class SignUp extends React.Component {
       );
    }
 }
-export default withRouter(SignUp);
+function mapStateToProps(currentUser) {
+   return {};
+}
+export default withRouter(connect(mapStateToProps)(SignUp));
