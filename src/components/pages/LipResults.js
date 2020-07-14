@@ -8,6 +8,7 @@ import LipResult from "../ui/LipResult";
 import axios from "axios";
 import { connect } from "react-redux";
 import actions from "../../store/actions";
+import currentUser from "../../store/reducers/currentUser";
 
 class LipResults extends React.Component {
    constructor(props) {
@@ -31,6 +32,27 @@ class LipResults extends React.Component {
             // handle error
             console.log(error);
          });
+      axios
+         .get("https://run.mocky.io/v3/d35a8f5c-4f55-4d37-b22a-11a74898a230")
+         .then((res) => {
+            // handle success
+            console.log(res);
+            console.log(res.data);
+            props.dispatch({
+               type: actions.UPDATE_CURRENT_USER,
+               payload: res.data,
+            });
+         })
+
+         .catch((error) => {
+            // handle error
+            console.log(error);
+         });
+
+      // props.dispatch({
+      //    type: actions.UPDATE_CURRENT_USER,
+      //    payload: res.data,
+      // });
    }
    render() {
       const lipsticks = this.props.lipstick;
@@ -39,9 +61,15 @@ class LipResults extends React.Component {
       //const test2 = this.props.lipstick;
       //console.log("TESY", test2);
       const userAnswers = {};
-      const user = this.props.location.results;
+      let user = this.props.location.results;
       let recomendations = [];
 
+      if (user === undefined) {
+         user = this.props.currentUser;
+      } else {
+         user = this.props.location.results;
+      }
+      console.log(this.props.currentUser);
       {
          lipsticks.forEach((lipstick) => {
             user.tags.forEach((tag) => {
@@ -170,6 +198,7 @@ class LipResults extends React.Component {
 function mapStateToProps(state) {
    return {
       lipstick: state.lipstick,
+      currentUser: state.currentUser[0],
    };
 }
 export default connect(mapStateToProps)(LipResults);
