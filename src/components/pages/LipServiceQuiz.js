@@ -6,26 +6,27 @@ import users from "../../mock-data/users";
 import { Link } from "react-router-dom";
 import appLogo from "../../icons/rote-lippen.png";
 import axios from "axios";
+import { connect } from "react-redux";
+import { withRouter } from "react-router-dom";
 
-const user = users[0];
-export default class LipServiceQuiz extends React.Component {
+class LipServiceQuiz extends React.Component {
    constructor() {
       super();
-      axios
-         .get(
-            "https://raw.githubusercontent.com/kaleykuhn/lip-service/master/src/mock-data/user.json"
-         )
-         .then(function (response) {
-            // handle success
-            console.log(response);
-         })
-         .catch(function (error) {
-            // handle error
-            console.log(error);
-         });
+      // axios
+      //    .get(
+      //       "https://raw.githubusercontent.com/kaleykuhn/lip-service/master/src/mock-data/user.json"
+      //    )
+      //    .then(function (response) {
+      //       // handle success
+      //       console.log(response);
+      //    })
+      //    .catch(function (error) {
+      //       // handle error
+      //       console.log(error);
+      //    });
 
       this.state = {
-         user: user,
+         user: {},
          describeYourselfAnswer: {},
          friendAnswer: {},
          valueAnswer: {},
@@ -66,12 +67,11 @@ export default class LipServiceQuiz extends React.Component {
          this.state.exhibitAnswer,
       ];
 
-      const newUser = { ...this.state.user };
+      const newUser = { ...this.props.currentUser };
       newUser.tags = tags;
       console.log(newUser);
       this.setState({ user: newUser });
       //console.log(this.state.user);
-
       this.props.history.push({
          pathname: "/lip-results",
          results: newUser,
@@ -390,3 +390,9 @@ export default class LipServiceQuiz extends React.Component {
       );
    }
 }
+function mapStateToProps(currentUser) {
+   return {
+      currentUser: currentUser.currentUser[0],
+   };
+}
+export default withRouter(connect(mapStateToProps)(LipServiceQuiz));
