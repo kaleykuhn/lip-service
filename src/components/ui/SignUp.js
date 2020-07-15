@@ -116,19 +116,19 @@ class SignUp extends React.Component {
             email: emailInput,
             password: hash(passwordInput),
             createdAt: Date.now(),
-            tags: "",
+            tags: [],
          };
          console.log("Valid!!!!", user);
          axios
             .get("https://run.mocky.io/v3/d35a8f5c-4f55-4d37-b22a-11a74898a230")
             .then((res) => {
                // handle success
-               const currentUser = res.data;
+               const currentUser = res.data[0];
                console.log("CURRENT", currentUser);
 
                this.props.dispatch({
                   type: actions.UPDATE_CURRENT_USER,
-                  payload: res.data,
+                  payload: currentUser,
                });
             })
 

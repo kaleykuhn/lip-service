@@ -82,6 +82,7 @@ class Login extends React.Component {
             email: emailInput,
             password: hash(passwordInput),
             createdAt: Date.now(),
+            tags: [],
          };
          console.log("Valid!!!!", user);
          axios
@@ -104,7 +105,7 @@ class Login extends React.Component {
          //this.props.history.push("/lip-service-quiz");
 
          //redirect the user
-         this.props.history.push("lip-service-quiz");
+         this.props.history.push("/lip-service-quiz");
       }
    }
 
