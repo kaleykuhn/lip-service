@@ -75,10 +75,7 @@ class LipServiceQuiz extends React.Component {
          type: actions.UPDATE_CURRENT_USER_TAGS,
          payload: newUser,
       });
-      this.props.history.push({
-         pathname: "/lip-results",
-         results: newUser,
-      });
+      this.props.history.push("/lip-results");
 
       // axios
       //    .get("https://run.mocky.io/v3/d35a8f5c-4f55-4d37-b22a-11a74898a230")

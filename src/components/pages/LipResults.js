@@ -4,7 +4,6 @@ import Navigation from "../ui/Navigation";
 import AppTemplate from "../ui/AppTemplate";
 import { Link } from "react-router-dom";
 import LipResult from "../ui/LipResult";
-//import lipsticks from "../../mock-data/lipsticks";
 import axios from "axios";
 import { connect } from "react-redux";
 import actions from "../../store/actions";
@@ -30,27 +29,25 @@ class LipResults extends React.Component {
             // handle error
             console.log(error);
          });
-
-      // props.dispatch({
-      //    type: actions.UPDATE_CURRENT_USER,
-      //    payload: res.data,
-      // });
    }
+
    render() {
+      const updatedUser = this.props.currentUser;
+      console.log("userTags", updatedUser);
       const lipsticks = this.props.lipstick;
       console.log(lipsticks);
 
       //const test2 = this.props.lipstick;
-      //console.log("TESY", test2);
-      const userAnswers = {};
-      let user = this.props.location.results;
+
+      //const userAnswers = {};
+      let user = this.props.currentUser;
       let recomendations = [];
 
-      if (user === undefined) {
-         user = this.props.currentUser;
-      } else {
-         user = this.props.location.results;
-      }
+      // if (user === undefined) {
+      // user = this.props.currentUser;
+      // } else {
+      //    user = this.props.location.results;
+      // }
       console.log(this.props.currentUser);
       {
          lipsticks.forEach((lipstick) => {
