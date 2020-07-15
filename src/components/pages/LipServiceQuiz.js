@@ -5,6 +5,8 @@ import AppTemplate from "../ui/AppTemplate";
 import appLogo from "../../icons/rote-lippen.png";
 import { connect } from "react-redux";
 import { withRouter } from "react-router-dom";
+import actions from "../../store/actions";
+import currentUser from "../../store/reducers/currentUser";
 
 class LipServiceQuiz extends React.Component {
    constructor() {
@@ -55,6 +57,7 @@ class LipServiceQuiz extends React.Component {
       console.log(tag);
    }
    getUserInputs() {
+      console.log(this.getUserInputs);
       console.log("test", this.state.describeYourselfAnswer);
       console.log("testtwo", this.state.friendAnswer);
       const tags = [
@@ -66,8 +69,16 @@ class LipServiceQuiz extends React.Component {
 
       const newUser = { ...this.props.currentUser };
       newUser.tags = tags;
-      console.log(newUser);
+      console.log("newUSER", newUser);
       this.setState({ user: newUser });
+      this.props.dispatch({
+         type: actions.UPDATE_CURRENT_USER_TAGS,
+         payload: newUser,
+      });
+      this.props.history.push({
+         pathname: "/lip-results",
+         results: newUser,
+      });
 
       // axios
       //    .get("https://run.mocky.io/v3/d35a8f5c-4f55-4d37-b22a-11a74898a230")
@@ -86,10 +97,10 @@ class LipServiceQuiz extends React.Component {
       //       console.log(error);
       //    });
       //console.log(this.state.user);
-      this.props.history.push({
-         pathname: "/lip-results",
-         results: newUser,
-      });
+      // this.props.history.push({
+      //    pathname: "/lip-results",
+      //    results: newUser,
+      //});
 
       // replace user.tags with this array in state(set State)
    }

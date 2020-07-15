@@ -30,22 +30,6 @@ class LipResults extends React.Component {
             // handle error
             console.log(error);
          });
-      axios
-         .get("https://run.mocky.io/v3/d35a8f5c-4f55-4d37-b22a-11a74898a230")
-         .then((res) => {
-            // handle success
-            console.log(res);
-            console.log(res.data);
-            props.dispatch({
-               type: actions.UPDATE_CURRENT_USER,
-               payload: res.data,
-            });
-         })
-
-         .catch((error) => {
-            // handle error
-            console.log(error);
-         });
 
       // props.dispatch({
       //    type: actions.UPDATE_CURRENT_USER,
@@ -196,7 +180,7 @@ class LipResults extends React.Component {
 function mapStateToProps(state) {
    return {
       lipstick: state.lipstick,
-      currentUser: state.currentUser[0],
+      currentUser: state.currentUser,
    };
 }
 export default connect(mapStateToProps)(LipResults);
