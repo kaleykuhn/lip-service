@@ -12,7 +12,7 @@ class LipResult extends React.Component {
       return (
          <div className="col-12 col-xl-10 offset-xl-1 col-lg-12 offset-lg-0 col-md-12 offset-md-0 card mb-2 px-2">
             <div className="card-header">Match</div>
-            <div className="card-body ">
+            <div className="card-body cardspacebackground">
                <img
                   src={appLogo}
                   width="46px;"
@@ -23,13 +23,22 @@ class LipResult extends React.Component {
                   src={lipstick.modelImageUrl}
                   width="182px;"
                   alt="Lip Service Lips"
-                  className=" float-right"
+                  className=" float-right zoom"
                />
                <div className="mb-0"></div>
-               <h4 className="cardfontcolor">{lipstick.name}</h4>
-               <h4 className="cardfontcolor">{lipstick.color}</h4>
-               <h4 className="cardfontcolor">{lipstick.finish}</h4>
-               <h4 className="cardfontcolor"> {lipstick.brand}</h4>
+               <h4 className="cardfontcolor" id="resultscardfont">
+                  {lipstick.name}
+               </h4>
+               <h4 className="cardfontcolor text-secondary">
+                  {lipstick.color}
+               </h4>
+               <h4 className="cardfontcolor text-secondary">
+                  {lipstick.finish}
+               </h4>
+               <h4 className="cardfontcolor goldtext">
+                  {" "}
+                  <em>{lipstick.brand}</em>
+               </h4>
                <a
                   href={lipstick.buyNowUrl}
                   className="btn btn-primary float-right btn-sm "

@@ -3,11 +3,37 @@
 #lipservefont {
    font-family: "Alice";
 }
+// .cardspacebackground {
+//    background-image: url("https://www.seekpng.com/png/detail/2-28145_lips-png-pic-background-dark-lipstick-with-white.png");
+// }
 
 .cardfontcolor {
    color: black;
 }
+.zoom {
+   padding: 0px;
+   background-color: white;
+   transition: transform 0.2s;
+   width: 182px;
 
+   margin: 0 auto;
+}
+
+.zoom:hover {
+   -ms-transform: scale(1.5); /* IE 9 */
+   -webkit-transform: scale(1.5); /* Safari 3-8 */
+   transform: scale(1.5);
+}
+#resultscardfont {
+   font-weight: 700;
+
+   //text-decoration: underline;
+   //text-decoration-color: black;
+}
+
+.goldtext {
+   color: rgb(140, 112, 21);
+}
 // .playful {
 //    color: red;
 //    text-shadow: 1px 1px red;
