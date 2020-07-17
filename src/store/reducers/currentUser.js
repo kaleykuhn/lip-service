@@ -1,5 +1,3 @@
-import { bindActionCreators } from "redux";
-
 import actions from "../actions";
 
 export default function currentUser(currentUser = {}, action) {

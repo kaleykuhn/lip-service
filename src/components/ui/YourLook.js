@@ -1,7 +1,7 @@
 import React from "react";
 import appLogo from "../../img/comfortmattetemperud.jpg";
 
-class LipResult extends React.Component {
+class YourLook extends React.Component {
    constructor(props) {
       super(props);
       console.log("lip-results");
@@ -47,9 +47,11 @@ class LipResult extends React.Component {
                </a>
                <h5 className="card-title">Light card title</h5>
                <p className="card-text cardfontcolor">{lipstick.desc}</p>
+
+               <button className="btn btn-danger my-2">delete</button>
             </div>
          </div>
       );
    }
 }
-export default LipResult;
+export default YourLook;

@@ -7,7 +7,6 @@ import LipResult from "../ui/LipResult";
 import axios from "axios";
 import { connect } from "react-redux";
 import actions from "../../store/actions";
-import currentUser from "../../store/reducers/currentUser";
 
 class LipResults extends React.Component {
    constructor(props) {
@@ -164,7 +163,7 @@ class LipResults extends React.Component {
             </Link>
             <Link
                to="/lip-service-quiz"
-               className="btn btn-outline-secondary btn-lg"
+               className="btn btn-outline-secondary btn-lg ml-0"
                id="nextButton"
             >
                Back

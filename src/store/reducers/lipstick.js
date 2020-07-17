@@ -1,7 +1,6 @@
 // import { bindActionCreators } from "redux";
 
 import actions from "../actions";
-import store from "../store";
 
 export default function lipstick(state = [], action) {
    //    // action.GET_User = "GET_USER"

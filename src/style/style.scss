@@ -5,25 +5,28 @@
 }
 // .cardspacebackground {
 //    background-image: url("https://www.seekpng.com/png/detail/2-28145_lips-png-pic-background-dark-lipstick-with-white.png");
+//    background-position-x: center;
 // }
-
+.cardresult {
+   padding-top: 0px;
+}
 .cardfontcolor {
    color: black;
 }
-.zoom {
-   padding: 0px;
-   background-color: white;
-   transition: transform 0.2s;
-   width: 182px;
+// .zoom {
+//    padding: 0px;
+//    background-color: white;
+//    transition: transform 0.2s;
+//    width: 182px;
+//    cursor: pointer;
+//    margin: 0 auto;
+// }
 
-   margin: 0 auto;
-}
-
-.zoom:hover {
-   -ms-transform: scale(1.5); /* IE 9 */
-   -webkit-transform: scale(1.5); /* Safari 3-8 */
-   transform: scale(1.5);
-}
+// .zoom:hover {
+//    -ms-transform: scale(1.2); /* IE 9 */
+//    -webkit-transform: scale(1.2); /* Safari 3-8 */
+//    transform: scale(1.2);
+// }
 #resultscardfont {
    font-weight: 700;
 

@@ -6,7 +6,6 @@ import appLogo from "../../icons/rote-lippen.png";
 import { connect } from "react-redux";
 import { withRouter } from "react-router-dom";
 import actions from "../../store/actions";
-import currentUser from "../../store/reducers/currentUser";
 
 class LipServiceQuiz extends React.Component {
    constructor() {
@@ -75,7 +74,12 @@ class LipServiceQuiz extends React.Component {
          type: actions.UPDATE_CURRENT_USER_TAGS,
          payload: newUser,
       });
+      this.props.dispatch({
+         type: actions.UPDATE_ALL_CURRENT_USER_TAGS,
+         payload: newUser.tags,
+      });
       this.props.history.push("/lip-results");
+      //this.props.history.push("/your-looks");
 
       // axios
       //    .get("https://run.mocky.io/v3/d35a8f5c-4f55-4d37-b22a-11a74898a230")

@@ -130,6 +130,10 @@ class SignUp extends React.Component {
                   type: actions.UPDATE_CURRENT_USER,
                   payload: currentUser,
                });
+               this.props.dispatch({
+                  type: actions.UPDATE_ALL_CURRENT_USER_TAGS,
+                  payload: currentUser.tags,
+               });
             })
 
             .catch((error) => {
