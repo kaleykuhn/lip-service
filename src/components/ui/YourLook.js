@@ -48,7 +48,7 @@ class YourLook extends React.Component {
                <h5 className="card-title">Light card title</h5>
                <p className="card-text cardfontcolor">{lipstick.desc}</p>
 
-               <button className="btn btn-danger my-2">delete</button>
+               <button className="btn btn-dark mb-0">delete</button>
             </div>
          </div>
       );

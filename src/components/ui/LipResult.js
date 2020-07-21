@@ -41,7 +41,7 @@ class LipResult extends React.Component {
                </h4>
                <a
                   href={lipstick.buyNowUrl}
-                  className="btn btn-primary float-right btn-sm "
+                  className="btn btn-primary float-right btn-sm"
                >
                   Buy Now
                </a>

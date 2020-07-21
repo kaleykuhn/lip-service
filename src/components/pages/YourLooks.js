@@ -169,7 +169,7 @@ class YourLooks extends React.Component {
             <div className="mb-8"></div>
             <Link
                to="/your-looks"
-               className="btn btn-outline-secondary btn-lg float-right btn-outline-danger "
+               className="btn btn-outline- btn-lg float-right btn-outline-dark "
                id="nextButton"
             >
                Clear

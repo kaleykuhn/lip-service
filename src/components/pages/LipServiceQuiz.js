@@ -121,7 +121,7 @@ class LipServiceQuiz extends React.Component {
 
             <br></br>
 
-            <div className="card bg-secondary">
+            <div className="card border border-secondary">
                <img
                   src={appLogo}
                   width="46px;"
@@ -201,7 +201,7 @@ class LipServiceQuiz extends React.Component {
                />
                <div className="card-body bg-dark">
                   <p className="">
-                     Which of these would your best friend describe you as?
+                     Which of these would your friends describe you as?
                   </p>
                   <div className="mb-3"></div>
                   <div className="custom-control custom-radio">
