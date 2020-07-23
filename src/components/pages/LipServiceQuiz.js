@@ -192,7 +192,7 @@ class LipServiceQuiz extends React.Component {
                </div>
             </div>
             <div className="mb-5"></div>
-            <div className="card bg-secondary">
+            <div className="card border border-secondary">
                <img
                   src={appLogo}
                   width="46px;"
@@ -200,7 +200,7 @@ class LipServiceQuiz extends React.Component {
                   className="mb-1 ml-2"
                />
                <div className="card-body bg-dark">
-                  <p className="">
+                  <p className="playful">
                      Which of these would your friends describe you as?
                   </p>
                   <div className="mb-3"></div>
@@ -262,7 +262,7 @@ class LipServiceQuiz extends React.Component {
                </div>
             </div>
             <div className="mb-5"></div>
-            <div className="card bg-secondary">
+            <div className="card border border-secondary">
                <img
                   src={appLogo}
                   width="46px;"
@@ -333,7 +333,7 @@ class LipServiceQuiz extends React.Component {
                </div>
             </div>
             <div className="mb-5"></div>
-            <div className="card bg-secondary">
+            <div className=" card border border-secondary">
                <img
                   src={appLogo}
                   width="46px;"

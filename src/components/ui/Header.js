@@ -21,17 +21,14 @@ class Header extends React.Component {
                className="mb-1"
             />
 
-            <h3
-               className="d-inline text-brand text-dark ml-3 "
-               id="lipservefont"
-            >
+            <h3 className="d-inline text-brand  black ml-3 " id="lipservefont">
                Lip Service
             </h3>
 
             <Link
                to="/"
                type="button"
-               className="btn btn-link float-right"
+               className="btn btn-link float-right black"
                onClick={() => {
                   this.logoutCurrentUser();
                }}
