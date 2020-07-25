@@ -14,7 +14,7 @@ class YourLooks extends React.Component {
       super(props);
 
       axios
-         .get("https://run.mocky.io/v3/8737dfe5-5cdd-4b97-b4e6-a64a283f7dfc")
+         .get("https://run.mocky.io/v3/f1327d36-528b-46da-b620-a3fe79f51061")
          .then((res) => {
             // handle success
             console.log(res);
@@ -62,7 +62,7 @@ class YourLooks extends React.Component {
       {
          lipsticks.forEach((lipstick) => {
             this.props.currentUserTags.forEach((tag) => {
-               if (tag.id == lipstick.tag.id) {
+               if (tag.id === lipstick.tag.id) {
                   recommendations.push(lipstick);
                }
             });
@@ -95,17 +95,17 @@ class YourLooks extends React.Component {
             <Navigation />
             <div className="row">
                <div className="col mb-0">
-                  <h2 className="mb-0">Looks</h2>
+                  {/* <h2 className="mb-0">Looks</h2> */}
                </div>
             </div>
-            <hr className="my-4"></hr>
+            {/* <hr className="my-4"></hr> */}
             <div className="mb-5"></div>
             <div className="row">
-               <div className="col">
+               {/* <div className="col">
                   <h3 className="text-center">
                      Give your Lips the personality they deserve!
                   </h3>
-               </div>
+               </div> */}
             </div>
             <div className="mb-5"></div>
             <div className="row">
@@ -116,7 +116,7 @@ class YourLooks extends React.Component {
                 const filteredRecommendations = [...new Set(recommendations)]*/}
 
                {filteredRecommendations.map((match) => (
-                  <YourLook lipstick={match} />
+                  <YourLook lipstick={match} key={match.id} />
                ))}
             </div>
 
@@ -176,7 +176,7 @@ class YourLooks extends React.Component {
             </Link>
             <Link
                to="/lip-service-quiz"
-               className="btn btn-outline-secondary btn-lg"
+               className="btn btn-link btn-outline-secondary btn-lg"
                id="nextButton"
             >
                Back

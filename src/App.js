@@ -6,10 +6,12 @@ import LipServiceQuiz from "./components/pages/LipServiceQuiz";
 import LipResults from "./components/pages/LipResults";
 import YourLooks from "./components/pages/YourLooks";
 import NotFound from "./components/pages/NotFound";
+import ScrollToTop from "./components/ui/ScrollToTop";
 
 function App() {
    return (
       <Router>
+         <ScrollToTop />
          <Switch>
             <Route exact path="/" component={Landing} />
             <Route exact path="/lip-service-quiz" component={LipServiceQuiz} />

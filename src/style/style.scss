@@ -37,7 +37,9 @@
    //text-decoration: underline;
    //text-decoration-color: black;
 }
-
+.match {
+   color: rgb(247, 247, 247);
+}
 .goldtext {
    color: rgb(140, 112, 21);
 }
@@ -74,6 +76,16 @@
 .custom-control-input ~ .custom-control-label {
    cursor: pointer;
 }
+.special-card {
+   /* create a custom class so you 
+      do not run into specificity issues 
+      against bootstraps styles
+      which tends to work better than using !important 
+      (future you will thank you later)*/
+
+   background-color: rgba(245, 245, 245, 1);
+   opacity: 0.7;
+}
 
 //landing
 //#form1 {
@@ -81,13 +93,21 @@
 //}
 
 .landing-background {
-   background: url("../img/promlips.jpeg") no-repeat center center fixed;
+   // background: url("../img/promlips.jpeg") no-repeat center center fixed;
+   // background-size: cover;
+   // //background-repeat: no-repeat;
+   // //spread across 100% of viewport
+   // //background-position: center center;
+   // min-height: 100vh;
+   background: url("../img/woman-wearing-white-crew-neck-top-2829368\ \(1\).jpg")
+      no-repeat center center fixed;
    background-size: cover;
    //background-repeat: no-repeat;
    //spread across 100% of viewport
    //background-position: center center;
    min-height: 100vh;
 }
+
 .bear-text {
    color: rgb(155, 14, 14);
 }

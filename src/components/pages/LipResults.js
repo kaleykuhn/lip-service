@@ -7,6 +7,7 @@ import LipResult from "../ui/LipResult";
 import axios from "axios";
 import { connect } from "react-redux";
 import actions from "../../store/actions";
+import currentUser from "../../store/reducers/currentUser";
 
 class LipResults extends React.Component {
    constructor(props) {
@@ -51,7 +52,7 @@ class LipResults extends React.Component {
       {
          lipsticks.forEach((lipstick) => {
             user.tags.forEach((tag) => {
-               if (tag.id == lipstick.tag.id) {
+               if (tag.id === lipstick.tag.id) {
                   recomendations.push(lipstick);
                }
             });
@@ -81,18 +82,11 @@ class LipResults extends React.Component {
             <Header />
             <Navigation />
             <div className="row">
-               <div className="col mb-0">
-                  <h2 className="mb-0">Results</h2>
-               </div>
+               <div className="col mb-0"></div>
             </div>
-            <hr className="my-4"></hr>
             <div className="mb-5"></div>
             <div className="row">
-               <div className="col">
-                  <h3 className="text-center">
-                     Give your Lips the personality they deserve!
-                  </h3>
-               </div>
+               <div className="col"></div>
             </div>
             <div className="row">
                <div className="col">
@@ -110,7 +104,7 @@ class LipResults extends React.Component {
                <LipResult lipstick={lipstickRecommendations[3]} /> */}
 
                {recomendations.map((match) => (
-                  <LipResult lipstick={match} />
+                  <LipResult lipstick={match} key={match.id} />
                ))}
             </div>
 
@@ -163,11 +157,12 @@ class LipResults extends React.Component {
             </Link>
             <Link
                to="/lip-service-quiz"
-               className="btn btn-outline-secondary btn-lg ml-0"
+               className="btn btn-link btn-outline-secondary btn-lg ml-0 mb-0"
                id="nextButton"
             >
                Back
             </Link>
+
             <div className="mb-8"></div>
          </AppTemplate>
       );

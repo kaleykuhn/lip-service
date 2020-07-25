@@ -6,6 +6,7 @@ import appLogo from "../../icons/rote-lippen.png";
 import { connect } from "react-redux";
 import { withRouter } from "react-router-dom";
 import actions from "../../store/actions";
+import currentUser from "../../store/reducers/currentUser";
 
 class LipServiceQuiz extends React.Component {
    constructor() {
@@ -111,8 +112,6 @@ class LipServiceQuiz extends React.Component {
             <Header />
             <Navigation />
 
-            <h2>Quiz</h2>
-            <hr className="my-4"></hr>
             <div className="mb-5"></div>
 
             <h3 className="text-center">

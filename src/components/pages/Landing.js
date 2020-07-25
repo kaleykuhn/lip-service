@@ -8,12 +8,12 @@ export default function Landing() {
    return (
       <div className="landing-background">
          <div className="container landing">
-            <div className="row py-2">
-               <div className="col-lg-1 offset-lg-0 ">
+            <div className="row ">
+               <div className="col-lg-1 offset-lg-0 mt-8 ml-3 mb-8 ">
                   <img
-                     className="bear logo "
+                     className="bear logo mb-5"
                      src={mainLogo}
-                     height="300px"
+                     height="280px"
                      alt="Lip service Landing Logo"
                   />
                </div>
