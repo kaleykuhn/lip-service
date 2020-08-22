@@ -6,7 +6,6 @@ import appLogo from "../../icons/rote-lippen.png";
 import { connect } from "react-redux";
 import { withRouter } from "react-router-dom";
 import actions from "../../store/actions";
-import currentUser from "../../store/reducers/currentUser";
 
 class LipServiceQuiz extends React.Component {
    constructor() {
@@ -284,7 +283,7 @@ class LipServiceQuiz extends React.Component {
                      />
 
                      <label
-                        className="custom-control-label"
+                        className="custom-control-label d-inline"
                         htmlFor="57a75a90-1d93-427a-9913-9254843d373b"
                      >
                         Creativity
@@ -303,7 +302,7 @@ class LipServiceQuiz extends React.Component {
                      />
 
                      <label
-                        className="custom-control-label"
+                        className="custom-control-label d-inline"
                         htmlFor="a74c46e3-54d4-4694-a725-5b15e5e06689"
                      >
                         {" "}
@@ -322,7 +321,7 @@ class LipServiceQuiz extends React.Component {
                         value="Sincerity"
                      />
                      <label
-                        className="custom-control-label"
+                        className="custom-control-label d-inline"
                         htmlFor="8bbe9a09-0d6d-45be-852d-b3346332bedc"
                      >
                         Sincerity
@@ -354,7 +353,7 @@ class LipServiceQuiz extends React.Component {
                         value="Dominance"
                      />
                      <label
-                        className="custom-control-label"
+                        className="custom-control-label d-inline"
                         htmlFor="ac1ab5d3-1c67-4afc-94c1-c2765efcaa9f"
                      >
                         {" "}
@@ -373,7 +372,7 @@ class LipServiceQuiz extends React.Component {
                         value="Loyalty"
                      />
                      <label
-                        className="custom-control-label"
+                        className="custom-control-label d-inline"
                         htmlFor="5ae236f3-c9e4-4fc3-9f55-5322896c6c60"
                      >
                         Loyalty
@@ -392,7 +391,7 @@ class LipServiceQuiz extends React.Component {
                      />
 
                      <label
-                        className="custom-control-label"
+                        className="custom-control-label d-inline"
                         htmlFor="08cc0730-3cd1-490c-a7f3-d3f44e14dede"
                      >
                         Open-Mindedness
@@ -405,7 +404,7 @@ class LipServiceQuiz extends React.Component {
             <div className="py-8">
                <button
                   className="btn btn-outline-secondary btn-lg float-right "
-                  id="nextButton"
+                  id="submitButton"
                   onClick={() => this.getUserInputs()}
                >
                   Submit

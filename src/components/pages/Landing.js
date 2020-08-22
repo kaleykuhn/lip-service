@@ -9,9 +9,9 @@ export default function Landing() {
       <div className="landing-background">
          <div className="container landing">
             <div className="row ">
-               <div className="col-lg-1 offset-lg-0 mt-8 ml-3 mb-8 ">
+               <div className="col-lg-1 offset-lg-0 offset-md-0 mt-8 ml-3 col-xl-3 offset-xl-2">
                   <img
-                     className="bear logo mb-5"
+                     className="logo mb-5 mt-7"
                      src={mainLogo}
                      height="280px"
                      alt="Lip service Landing Logo"

@@ -146,7 +146,7 @@ class SignUp extends React.Component {
 
    render() {
       return (
-         <div className="offset-1 col-10 offset-sm-1 col-sm-9 offset-md-1 col-md-6 offset-lg-1 col-lg-5 offset-xl-2 col-xl-4 mb-12  mb-8 py-2 special-card">
+         <div className="offset-1 col-10 offset-sm-1 col-sm-9 offset-md-1 col-md-6 offset-lg-1 col-lg-5 offset-xl-2 col-xl-4 mb-12 mt-9 mb-9 py-2 special-card">
             <div className="card">
                <div className="card-body text-dark bg-white rounded">
                   <h2 className="card-title">Nice to Meet You</h2>

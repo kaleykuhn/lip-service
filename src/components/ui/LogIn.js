@@ -115,7 +115,7 @@ class Login extends React.Component {
 
    render() {
       return (
-         <div className="offset-1 col-10 offset-sm-1 col-sm-9 offset-md-1 col-md-6 offset-lg-1 col-lg-4 offset-xl-1 col-xl-4 mb-6 mt-8">
+         <div className="offset-1 col-10 offset-sm-1 col-sm-9 offset-md-1 col-md-6 offset-lg-1 col-lg-4 offset-xl-1 col-xl-4 mb-6 mt-9 special-card">
             <div className="card">
                <div className="card-body text-dark bg-white rounded">
                   <h2 className="card-title">Welcome back</h2>

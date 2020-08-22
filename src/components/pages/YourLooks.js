@@ -62,7 +62,7 @@ class YourLooks extends React.Component {
       {
          lipsticks.forEach((lipstick) => {
             this.props.currentUserTags.forEach((tag) => {
-               if (tag.id === lipstick.tag.id) {
+               if (tag.id == lipstick.tag.id) {
                   recommendations.push(lipstick);
                }
             });
@@ -169,15 +169,15 @@ class YourLooks extends React.Component {
             <div className="mb-8"></div>
             <Link
                to="/your-looks"
-               className="btn btn-outline- btn-lg float-right btn-outline-dark "
-               id="nextButton"
+               className="btn btn-outline btn-lg float-right btn-outline-secondary"
+               id="clearButton"
             >
                Clear
             </Link>
             <Link
                to="/lip-service-quiz"
-               className="btn btn-link btn-outline-secondary btn-lg"
-               id="nextButton"
+               className="btn btn-link btn-lg"
+               id="looksbButton"
             >
                Back
             </Link>

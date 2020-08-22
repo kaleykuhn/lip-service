@@ -7,7 +7,6 @@ import LipResult from "../ui/LipResult";
 import axios from "axios";
 import { connect } from "react-redux";
 import actions from "../../store/actions";
-import currentUser from "../../store/reducers/currentUser";
 
 class LipResults extends React.Component {
    constructor(props) {
@@ -52,7 +51,7 @@ class LipResults extends React.Component {
       {
          lipsticks.forEach((lipstick) => {
             user.tags.forEach((tag) => {
-               if (tag.id === lipstick.tag.id) {
+               if (tag.id == lipstick.tag.id) {
                   recomendations.push(lipstick);
                }
             });
@@ -157,8 +156,8 @@ class LipResults extends React.Component {
             </Link>
             <Link
                to="/lip-service-quiz"
-               className="btn btn-link btn-outline-secondary btn-lg ml-0 mb-0"
-               id="nextButton"
+               className="btn btn-link ml-0 mb-0"
+               id="backButton"
             >
                Back
             </Link>
